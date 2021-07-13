@@ -21,7 +21,7 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value;
-    //const data = {formText}
+    const data = {formText}
 
     if(Client.checkForUrl(formText)){
 
@@ -29,12 +29,12 @@ function handleSubmit(event) {
     fetch('http://localhost:8081/addData',{
         method: 'POST',
         credentials: 'same-origin',
-       mode: 'cors',
+       //mode: 'cors',
         headers:{
             'Content-Type':'application/json',
         },
-        body:JSON.stringify({formText: formText}),
-        //body:JSON.stringify(data),
+        body:JSON.stringify({formText}),
+        body:JSON.stringify(data),
         
     })
     .then(res => res.json())
