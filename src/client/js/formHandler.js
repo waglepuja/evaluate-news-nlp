@@ -29,12 +29,12 @@ function handleSubmit(event) {
     fetch('http://localhost:8081/addData',{
         method: 'POST',
         credentials: 'same-origin',
-       //mode: 'cors',
+        mode: 'cors',
         headers:{
             'Content-Type':'application/json',
         },
         body:JSON.stringify({formText}),
-        body:JSON.stringify(data),
+        //body:JSON.stringify(data),
         
     })
     .then(res => res.json())
