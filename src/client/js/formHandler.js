@@ -21,7 +21,7 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value;
-    const data = {formText}
+    //const data = {formText}
 
     if(Client.checkForUrl(formText)){
 
@@ -33,7 +33,7 @@ function handleSubmit(event) {
         headers:{
             'Content-Type':'application/json',
         },
-        body:JSON.stringify({formText}),
+        body:JSON.stringify({formText:formText}),
         //body:JSON.stringify(data),
         
     })
