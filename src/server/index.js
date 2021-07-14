@@ -38,7 +38,7 @@ app.get('/test', function (req, res) {
 //POST request
 
 const baseURL = "https://api.meaningcloud.com/sentiment-2.1?key="
-const application_key = "1b37c6c6f36634c511f1bbbddeecc68d"
+//const application_key = "1b37c6c6f36634c511f1bbbddeecc68d"
 app.post('/addData', async(req, res) => {
     console.log('req.body ===+>', req.body)
     const response = await fetch(baseURL + application_key + '&lang=en&txt=' + req.body.formText, { method: 'POST' });
